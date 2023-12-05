@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>HISGRACE - Make Your Trip Joyful with Us</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.icon" rel="icon">
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/login.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
+        <div class="container">
+            <div class="card login-card" id="loginCard">
+                <div class="row no-gutters">
+                    <div class="col-md-5">
+                        <img src="/assets/images/TAXI-min.jpg" alt="login" class="login-card-img">
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card-body" style="background-color: rgb(0, 0, 0);">
+                            <div class="brand-wrapper">
+                                <h2 class="mb-0 text-uppercase">
+                                    <i class="fa fa-taxi me-3" style="color: black; background-color:yellow ; padding: 7px; border-radius: 100%;"></i>
+                                    <span style="color: rgb(255, 0, 0);">HISGRACE</span>
+                                </h2>
+                            </div>
+
+                            <p class="login-card-description"  >Create new account</p>
+
+                            <form action="/signup" method="post">
+                                <!-- Your login form fields here -->
+                                <div class="form-group">
+                                    <label for="email" class="sr-only">Username</label>
+                                    <input type="name" name="name" id="name" class="form-control" placeholder="Username">
+                                </div>
+                                <div class="form-group">
+                                  <label for="email" class="sr-only">Email</label>
+                                  <input type="email" name="email" id="email" class="form-control" placeholder="Email address">
+                              </div>
+                              <div class="form-group">
+                                <label for="email" class="sr-only">Phone</label>
+                                <input type="number" name="phone" id="phone" class="form-control" placeholder="Mobile number">
+                            </div>
+                                <div class="form-group mb-4">
+                                    <label for="password" class="sr-only">Password</label>
+                                    <input type="password" name="password" id="password" class="form-control" placeholder="password">
+                                </div>
+                                <div class="form-group mb-4">
+                                  <label for="password" class="sr-only">confirm Password</label>
+                                  <input type="password" name="cpassword" id="password" class="form-control" placeholder="confirm password">
+                              </div>
+                                <input name="login" id="login" class="btn btn-block login-btn mb-4 btn-primary" type="submit" value="Login">
+                            </form>
+                            <% if(error){ %>
+                                <p class="login-card-description" style="color: red;" ><%= error %></p>
+                                <% } %>
+                            <p class="login-card-footer-text">Don't have an account? <a href="/getlogin" id="signup" class="text-reset">Register here</a></p>
+                            <nav class="login-card-footer-nav">
+                                <a href="">Terms of use.</a>
+                                <a href="">Privacy policy</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+    </main>
+    
+
+    
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<script>
+  $(document).ready(() => {
+      $("#signup").click(() => {
+        $("#loginCard").toggle(200)
+        $("#signupCard").toggle(200)
+
+      })
+      $(".login").click(() => {
+        $("#signupCard").toggle(200)
+        $("#loginCard").toggle(200)
+      })
+  })
+</script>
+</body>
+
+</html>
